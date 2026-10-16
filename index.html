@@ -1,0 +1,376 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="강릉 여행"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="theme-color" content="#FFFFFF"><meta name="robots" content="noindex,nofollow">
+<link rel="manifest" href="manifest.webmanifest"><link rel="apple-touch-icon" href="apple-touch-icon.png">
+<style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+</head><body>
+<title>강릉 가족여행 10/25–27</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<style>
+/* Layout: minimal single column — quiet type, hairline rules, time in a left gutter, one ink accent */
+:root{
+  --bg:#FFFFFF; --ink:#111111; --ink2:#6B6B6B; --ink3:#A8A8A8; --rule:#ECECEC; --soft:#F6F6F6;
+  --accent:#111111; --on-accent:#FFFFFF; --ok:#2E7D4F; --warn:#B4541A; --link:#111111;
+  --font:-apple-system,BlinkMacSystemFont,"SF Pro Text","Apple SD Gothic Neo","Pretendard","Noto Sans KR",system-ui,sans-serif;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#0E0E0E; --ink:#F2F2F2; --ink2:#9A9A9A; --ink3:#5E5E5E; --rule:#222222; --soft:#181818;
+  --accent:#F2F2F2; --on-accent:#0E0E0E; --ok:#6CC28F; --warn:#E39A62; --link:#F2F2F2; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0E0E0E; --ink:#F2F2F2; --ink2:#9A9A9A; --ink3:#5E5E5E; --rule:#222222; --soft:#181818;
+  --accent:#F2F2F2; --on-accent:#0E0E0E; --ok:#6CC28F; --warn:#E39A62; --link:#F2F2F2; color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--font);font-size:16px;line-height:1.5;letter-spacing:-.015em;-webkit-font-smoothing:antialiased;-webkit-text-size-adjust:100%;-webkit-tap-highlight-color:transparent}
+.wrap{max-width:560px;margin:0 auto;padding-left:max(24px,env(safe-area-inset-left,0px));padding-right:max(24px,env(safe-area-inset-right,0px));padding-block:16px 64px}
+button{font:inherit;color:inherit}
+button:focus-visible,a:focus-visible,[tabindex]:focus-visible{outline:1.5px solid var(--ink);outline-offset:3px}
+svg{display:block}
+.navrow{display:flex;justify-content:space-between;min-height:40px;align-items:center}
+.txtbtn{border:0;background:none;color:var(--ink2);font-size:14px;padding:6px 0;cursor:pointer}
+.txtbtn[aria-pressed="true"]{color:var(--ink);font-weight:600}
+h1{font-size:30px;font-weight:600;letter-spacing:-.03em;line-height:1.15;margin:28px 0 0}
+.lede{margin:10px 0 0;color:var(--ink2);font-size:14px}
+.lede b{color:var(--ink);font-weight:600;font-variant-numeric:tabular-nums}
+.sync{font-size:12px;color:var(--ink3);margin-right:4px}
+.sync::before{content:"";display:inline-block;width:6px;height:6px;border-radius:50%;background:var(--ink3);margin-right:6px;vertical-align:1px}
+.sync[data-on="1"]{color:var(--ok)} .sync[data-on="1"]::before{background:var(--ok)}
+.segwrap{position:sticky;top:env(safe-area-inset-top,0px);z-index:10;background:var(--bg);margin:32px calc(-1 * max(24px,env(safe-area-inset-right,0px))) 0 calc(-1 * max(24px,env(safe-area-inset-left,0px)));padding:0 max(24px,env(safe-area-inset-right,0px)) 0 max(24px,env(safe-area-inset-left,0px));border-bottom:1px solid var(--rule)}
+.seg{max-width:560px;margin:0 auto;display:flex;gap:24px}
+.seg button{border:0;background:none;padding:14px 0 12px;font-size:15px;color:var(--ink3);cursor:pointer;border-bottom:2px solid transparent;margin-bottom:-1px;white-space:nowrap}
+.seg button[aria-selected="true"]{color:var(--ink);font-weight:600;border-bottom-color:var(--ink)}
+.hdr{font-size:13px;color:var(--ink2);margin:36px 0 4px;font-weight:500;letter-spacing:-.005em}
+.ftr{font-size:13px;color:var(--ink3);margin:12px 0 0;line-height:1.55}
+.group{list-style:none;margin:0;padding:0}
+.cell{position:relative;border-bottom:1px solid var(--rule)}
+.rowh{display:grid;grid-template-columns:1fr auto auto;gap:14px;align-items:center;padding:16px 0;width:100%;cursor:pointer;text-decoration:none;color:inherit}
+.tile{display:none}
+.mid{min-width:0}
+.nm{display:block;font-size:16px;font-weight:500;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.nm.nmw{white-space:normal}
+.sub{display:block;font-size:13px;color:var(--ink2);margin-top:2px}
+.sub .g{color:var(--ok)}
+.val{font-size:14px;color:var(--ink2);font-variant-numeric:tabular-nums;text-align:right}
+.chev{color:var(--ink3);transition:transform .2s;width:14px}
+.cell.open .chev{transform:rotate(90deg)}
+#list .rowh{grid-template-columns:48px 1fr auto auto}
+#list .val{order:-1;text-align:left;color:var(--ink);font-weight:600;font-size:15px}
+.grip{display:none;border:0;background:none;padding:0;width:28px;height:32px;place-items:center;color:var(--ink3);touch-action:none;cursor:grab}
+.editing .grip{display:grid} .editing .chev{display:none}
+.editing .rowh{cursor:default}
+.det{padding:0 0 20px 62px}
+.det p{margin:0;font-size:14px;color:var(--ink2);line-height:1.6}
+.tags{display:flex;flex-wrap:wrap;gap:12px;margin-top:10px}
+.tag{font-size:12px;font-weight:500;padding:0;background:none;color:var(--ink2)}
+.tag::before{content:"";display:inline-block;width:5px;height:5px;border-radius:50%;background:currentColor;margin-right:6px;vertical-align:2px}
+.tag.ok{color:var(--ok)} .tag.warn{color:var(--warn)} .tag.info{color:var(--ink2)}
+.rv{margin-top:14px;border-top:1px solid var(--rule)}
+.rv summary{list-style:none;cursor:pointer;padding:12px 0 4px;font-size:13px;font-weight:500;color:var(--ink);display:flex;justify-content:space-between;align-items:center}
+.rv summary::-webkit-details-marker{display:none}
+.rv summary::after{content:"+";font-weight:400;color:var(--ink3);font-size:16px;line-height:1}
+.rv[open] summary::after{content:"–"}
+.rv ul{list-style:none;margin:0;padding:4px 0 0;display:grid;gap:6px}
+.rv li{font-size:13px;line-height:1.5;padding-left:14px;position:relative;color:var(--ink2)}
+.rv li::before{position:absolute;left:0}
+.rv li.p::before{content:"+";color:var(--ok)} .rv li.c::before{content:"–";color:var(--warn)}
+.links{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px;align-items:center}
+.links a{font-size:13px;color:var(--link);text-decoration:none;border:1px solid var(--rule);border-radius:999px;padding:7px 14px;font-weight:500}
+.links a.go{background:var(--accent);border-color:var(--accent);color:var(--on-accent)}
+.tel{font-size:13px;color:var(--ink2);font-variant-numeric:tabular-nums;user-select:all;-webkit-user-select:all;padding:7px 2px}
+.cell.dragging{background:var(--bg);box-shadow:0 12px 32px rgba(0,0,0,.14);z-index:5}
+.resetbtn{display:none}
+.editing-on .resetbtn{display:block;margin:12px 0 0;border:0;background:none;color:var(--warn);font-size:14px;padding:4px 0;cursor:pointer}
+.static .rowh{cursor:default}
+.memo{display:block;margin-top:16px}
+.memo-l{display:block;font-size:12px;color:var(--ink3);margin:0 0 6px}
+.memo textarea{width:100%;font:inherit;font-size:16px;line-height:1.5;color:var(--ink);background:var(--soft);border:0;border-radius:8px;padding:10px 12px;resize:vertical;min-height:44px}
+.memo textarea::placeholder{color:var(--ink3)}
+.memo textarea:focus{outline:1.5px solid var(--ink);outline-offset:0}
+.memo-box{padding:8px 0 4px}
+.memo-box .memo{margin:0}
+.mm{color:var(--ink)}
+@media (max-width:360px){.wrap{padding-left:max(18px,env(safe-area-inset-left,0px));padding-right:max(18px,env(safe-area-inset-right,0px))}.seg{gap:18px}#list .rowh{grid-template-columns:42px 1fr auto auto}.det{padding-left:56px}}
+@media (prefers-reduced-motion:reduce){.chev{transition:none}}
+.wx{margin:8px 0 6px;padding:14px 0 16px;border-bottom:1px solid var(--rule)}
+.wx-main{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap}
+.wx-t{font-size:28px;font-weight:600;letter-spacing:-.03em;font-variant-numeric:tabular-nums}
+.wx-lo{font-size:18px;color:var(--ink3);font-weight:500}
+.wx-c{font-size:15px;color:var(--ink)}
+.wx-meta{display:flex;gap:14px;flex-wrap:wrap;font-size:13px;color:var(--ink2);margin-top:4px}
+.wx-rain{color:var(--warn);font-weight:600}
+.wx-src{font-size:12px;color:var(--ink3);margin-top:6px}
+.wx-none{font-size:13px;color:var(--ink3)}
+.todaybar{margin:10px 0 0;padding:14px 16px;border-radius:10px;background:var(--accent);color:var(--on-accent);display:grid;gap:2px}
+.tb-l{font-size:12px;opacity:.7}
+.tb-n{font-size:17px;font-weight:600}
+.tb-t{font-size:13px;opacity:.85;font-variant-numeric:tabular-nums}
+.now-tag{display:inline-block;font-size:11px;font-weight:600;padding:1px 6px;border-radius:4px;margin-right:6px;vertical-align:1px;border:1px solid var(--ink);color:var(--ink)}
+.is-now .now-tag{background:var(--ink);color:var(--bg)}
+.is-past .nm,#list .is-past .val{color:var(--ink3)}
+.simbar{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin:12px 0 0;padding:10px 14px;border:1px dashed var(--ink3);border-radius:10px;font-size:13px;color:var(--ink2)}
+.simbar span{flex:1;min-width:0}
+.simbar b{color:var(--ink);font-variant-numeric:tabular-nums}
+.simbar button{border:0;background:none;font-size:13px;color:var(--ink);font-weight:600;padding:4px 0;cursor:pointer}
+.tchk{width:20px;height:20px;margin:2px 0 0;accent-color:var(--ink);cursor:pointer}
+.todo.done .nm{color:var(--ink3);text-decoration:line-through}
+.tnote{white-space:pre-line;margin-top:6px;line-height:1.5}
+.seg{gap:20px;overflow-x:auto;scrollbar-width:none}.seg::-webkit-scrollbar{display:none}
+.food{margin-top:28px}
+.food-h{display:flex;align-items:baseline;gap:10px}
+.food-n{font-size:20px;font-weight:600;letter-spacing:-.02em}
+.food-tag{font-size:12px;color:var(--ink2)}
+.food-why{margin:6px 0 4px;font-size:14px;color:var(--ink2);line-height:1.6}
+.inplan{display:inline-block;font-size:11px;font-weight:600;margin-left:8px;padding:1px 6px;border-radius:4px;border:1px solid var(--ok);color:var(--ok);vertical-align:2px}
+@media (max-width:380px){.seg{gap:14px}.seg button{font-size:14px}}
+</style>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="i-car" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M5 16h14M6.5 16V11l1.6-4h7.8l1.6 4v5M6.5 19v-3M17.5 19v-3"/></symbol>
+    <symbol id="i-cup" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M5 9h11v5a4 4 0 0 1-4 4H9a4 4 0 0 1-4-4V9zM16 10h1.5a2 2 0 0 1 0 4H16M9 4.5v2M12 4v2.5"/></symbol>
+    <symbol id="i-meal" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M7 3v8M5 3v4a2 2 0 0 0 4 0V3M7 11v10M16 21V3c-2 1.5-3 4-3 7v3h3"/></symbol>
+    <symbol id="i-walk" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M3 16c2-1.5 4-1.5 6 0s4 1.5 6 0 4-1.5 6 0M3 10c2-1.5 4-1.5 6 0s4 1.5 6 0 4-1.5 6 0"/></symbol>
+    <symbol id="i-bed" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M3 18V7M3 14h18v4M21 14v-2a3 3 0 0 0-3-3h-7v5"/></symbol>
+    <symbol id="i-bag" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M5 8h14l-1 12H6L5 8zM9 8V6a3 3 0 0 1 6 0v2"/></symbol>
+    <symbol id="i-moon" viewBox="0 0 24 24"><path fill="currentColor" d="M19 14.5A7.5 7.5 0 0 1 9.5 5 7.5 7.5 0 1 0 19 14.5z"/></symbol>
+    <symbol id="i-paw" viewBox="0 0 24 24"><g fill="currentColor"><circle cx="7" cy="9" r="1.8"/><circle cx="10.5" cy="6" r="1.8"/><circle cx="14.5" cy="6" r="1.8"/><circle cx="18" cy="9" r="1.8"/><path d="M12.5 11c-2.6 0-5 3.2-5 5.3 0 1.6 1.3 2.2 2.6 2.2 1 0 1.5-.5 2.4-.5s1.4.5 2.4.5c1.3 0 2.6-.6 2.6-2.2 0-2.1-2.4-5.3-5-5.3z"/></g></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24"><path fill="currentColor" d="M12 21.5s-7-6-7-11.5a7 7 0 0 1 14 0c0 5.5-7 11.5-7 11.5zm0-9a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5z"/></symbol>
+    <symbol id="i-sun" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2.5v2M12 19.5v2M2.5 12h2M19.5 12h2M5.3 5.3l1.4 1.4M17.3 17.3l1.4 1.4M5.3 18.7l1.4-1.4M17.3 6.7l1.4-1.4"/></g></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" d="M5 12.5l4.5 4.5L19 7.5"/></symbol>
+    <symbol id="i-chat" viewBox="0 0 24 24"><path fill="currentColor" d="M4 5.5A2.5 2.5 0 0 1 6.5 3h11A2.5 2.5 0 0 1 20 5.5v8a2.5 2.5 0 0 1-2.5 2.5H10l-5 4v-4.2A2.5 2.5 0 0 1 4 13.5v-8z"/></symbol>
+    <symbol id="i-key" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="8" cy="12" r="3.5"/><path d="M11.5 12H20M17 12v3M20 12v2"/></g></symbol>
+    <symbol id="i-grip" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" d="M5 8h14M5 12h14M5 16h14"/></symbol>
+    <symbol id="i-chev" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" d="M9.5 6l6 6-6 6"/></symbol>
+  </defs>
+</svg>
+
+<div class="wrap">
+  <div class="navrow"><button class="txtbtn" id="simBtn" type="button" aria-pressed="false">오늘 모드 미리보기</button><button class="txtbtn" id="editBtn" type="button" aria-pressed="false">편집</button></div>
+  <h1>강릉 여행</h1>
+  <p class="lede"><span class="sync" id="sync" data-on="0">연결 중</span> <b id="dday">D-10</b> · 10월 25일 – 27일 · 부모님, 강아지와 함께</p>
+
+  <div class="segwrap">
+    <div class="seg" role="tablist" aria-label="일정">
+      <button role="tab" data-go="d1" aria-selected="true">25일 일</button>
+      <button role="tab" data-go="d2" aria-selected="false">26일 월</button>
+      <button role="tab" data-go="d3" aria-selected="false">27일 화</button>
+      <button role="tab" data-go="d5" aria-selected="false">먹거리</button>
+      <button role="tab" data-go="d4" aria-selected="false">준비</button>
+    </div>
+  </div>
+
+  <div id="panel"></div>
+
+  <p class="hdr">숙소</p>
+  <ul class="group">
+    <li class="cell"><a class="rowh" href="https://map.naver.com/p/search/%EC%8B%A0%EB%9D%BC%EB%AA%A8%EB%85%B8%EA%B7%B8%EB%9E%A8%EA%B0%95%EB%A6%89%EB%A0%88%EC%A7%80%EB%8D%98%EC%8A%A4" target="_blank" rel="noopener"><span class="tile" style="background:#5856D6"><svg width="18" height="18"><use href="#i-bed"/></svg></span><span class="mid"><span class="nm">신라모노그램 레지던스</span><span class="sub">펫룸 · 해안로 210</span></span><span class="val"></span><span class="chev"><svg width="14" height="14"><use href="#i-chev"/></svg></span></a></li>
+    <li class="cell static"><div class="rowh"><span class="tile" style="background:#FF9500"><svg width="18" height="18"><use href="#i-key"/></svg></span><span class="mid"><span class="nm">체크인 · 체크아웃</span></span><span class="val">15:00 · 11:00</span><span></span></div></li>
+    <li class="cell static"><div class="rowh"><span class="tile" style="background:#34C759"><svg width="18" height="18"><use href="#i-paw"/></svg></span><span class="mid"><span class="nm">펫룸 조건</span></span><span class="val">7kg 이하 · 2마리</span><span></span></div></li>
+    <li class="cell"><a class="rowh" href="https://search.naver.com/search.naver?query=%EA%B0%95%EB%A6%89+%EB%82%A0%EC%94%A8" target="_blank" rel="noopener"><span class="tile" style="background:#007AFF"><svg width="18" height="18"><use href="#i-sun"/></svg></span><span class="mid"><span class="nm">강릉 날씨</span></span><span class="val">일몰 17:30경</span><span class="chev"><svg width="14" height="14"><use href="#i-chev"/></svg></span></a></li>
+  </ul>
+  <p class="ftr" id="foot">반려견 표시는 앱·후기 기준이라 출발 전 전화로 확인하세요. 길찾기는 카카오맵 앱(없으면 웹)으로 바로 길안내가 열려요. 지도와 블로그 후기는 네이버로 열려요. 편집으로 바꾼 순서와 메모는 이 기기에만 저장돼요.</p>
+</div>
+
+<script>
+(function(){
+var DAYS={
+ d1:{eb:'1일차 · 10월 25일 일요일',title:'강문 막국수와 경포호 산책',dn:'저녁 · 솔향대게 포장해서 객실에서',icon:'car',stops:[
+  {t:'09:00',k:'출발',i:'car',n:'수지 출발',d:'영동고속도로 → 강릉IC → 강문해변. 휴게소 포함 약 3시간 30분.'},
+  {t:'10:00',k:'휴게소',i:'paw',n:'덕평자연휴게소',d:'펫파크 잔디광장에서 강아지 산책. 10:00 오픈.',tags:[['ok','반려견 공간']],q:'덕평자연휴게소',p:['2026년 6월 재단장한 펫파크에 잔디광장과 애견카페','소고기국밥이 대표 메뉴'],c:['주말엔 주차가 붐벼요']},
+  {t:'12:45',k:'점심',i:'meal',n:'고씨네 동해막국수',d:'강문해변 앞. 수제 막국수와 순두부, 2층 창가에서 바다가 보여요. 일요일 08:00~15:30, 17:00~20:30.',tags:[['ok','반려견 동반 후기']],q:'고씨네동해막국수강릉본점',tel:'0507-1421-5458',p:['수제 면과 들깨·두부 국물이 맛있다는 평','2층 창가 바다 전망이 좋아요','면으로 싼 막국수 김밥이 독특'],c:['1층은 포장집처럼 보여서 2층을 놓치기 쉬워요']},
+  {t:'14:00',k:'커피 테이크아웃',i:'cup',n:'에브리모먼트 커피',d:'고씨네에서 차로 5분(난설헌로 228-29, 초당). 크림 올린 아인슈페너가 시그니처라 부모님도 부담 없어요. 일요일 11:00~24:00, 수요일 휴무. 길가 주차.',q:'에브리모먼트커피 강릉',tel:'0507-1374-0306',p:['시그니처 크림 커피가 진하고 고소하다는 평','크루아상 샌드위치·크로플도 맛있다는 후기'],c:['전용 주차장이 없어 길가에 잠깐 세워야 해요']},
+  {t:'14:30',k:'산책',i:'walk',n:'경포호',d:'커피 들고 평지 산책로를 걸어요. 옆 경포 가시연습지 데크길도 편해요.',q:'경포호수',p:['평지라 걷기 편하고 한 바퀴 1시간 반','자전거 대여, 왜가리 구경'],c:['바람 부는 날은 쌀쌀해요']},
+  {t:'15:30',k:'산책',i:'walk',n:'경포해변',d:'경포호에서 바로 이어지는 넓은 백사장. 강아지와 바다 보며 잠깐 걷기.',q:'경포해변',p:['모래사장이 넓고 산책로가 잘 돼 있어요'],c:['주말엔 사람이 많아요']},
+  {t:'16:30',k:'숙소',i:'bed',n:'체크인 · 노을 산책',d:'레지던스 동 펫룸. 일몰 17:30 전후.',q:'신라모노그램강릉레지던스',p:['오션뷰, 넓고 깔끔한 객실','건물 사이 편의점'],c:['수영장 유료·예약제','해변 가는 복도가 미로 같다는 후기']},
+  {t:'18:00',k:'저녁 포장',i:'bag',n:'솔향대게',d:'호텔에서 차로 5분(해안로 286). 오후에 미리 전화로 포장 주문. 반려견 동반이 된다는 후기가 많아 매장에서 먹어도 돼요. 일요일 11:00~22:00, 화요일 휴무.',tags:[['ok','반려견 동반 후기']],q:'솔향대게 강릉',tel:'033-653-2202',p:['강아지에게 고구마 말랭이까지 챙겨줬다는 후기','직원이 친절하고 대게 맛이 좋다는 평'],c:['가격대가 높은 편']}
+ ]},
+ d2:{eb:'2일차 · 10월 26일 월요일',title:'안목에서 정동진까지 남쪽 해안',dn:'저녁 · 중앙시장 오징어순대·회 포장해서 객실에서',icon:'sun',stops:[
+  {t:'08:00',k:'아침',i:'cup',n:'교대로 조식',d:'조식당은 반려견 입장이 안 돼요.'},
+  {t:'09:30',k:'커피',i:'cup',n:'보사노바 강릉점',d:'안목해변 루프탑 바다뷰. 08:00 오픈.',tags:[['ok','반려견 동반']],q:'보사노바강릉점',p:['루프탑 카바나 바다 전망','땅콩버터라떼, 앙버터 빵 호평'],c:['산미 적은 커피','빵이 조금 건조했다는 후기']},
+  {t:'10:30',k:'산책',i:'walk',n:'솔바람다리',d:'약 600m 보행교. 경사로가 있어 편해요.',q:'솔바람다리',p:['한쪽은 강, 한쪽은 바다','경사로가 있어 유모차도 편해요'],c:['밤 조명이 더 예쁘다는 평']},
+  {t:'11:30',k:'점심',i:'meal',n:'강릉불고기 본점',d:'파불고기와 초당 모두부. 매일 10:00~19:30.',tags:[['ok','반려견 동반 표시'],['warn','전화 확인']],q:'강릉불고기본점',tel:'033-646-6033',p:['MSG 없이 담백, 반찬 많음','부드러운 파불고기'],c:['가격이 다소 비싸요','평이 엇갈리는 편']},
+  {t:'13:00',k:'드라이브',i:'car',n:'헌화로 해안도로',d:'정동진~심곡~금진. 천천히 달리며 감상.',q:'헌화로',p:['바다 바로 옆이라 속이 뻥 뚫려요'],c:['차 세울 곳이 거의 없어요','바람 센 날은 파도가 튀어요']},
+  {t:'14:30',k:'휴식',i:'moon',n:'호텔에서 쉬기'},
+  {t:'17:00',k:'장보기',i:'bag',n:'강릉중앙시장',d:'19:00 마감. 오징어순대는 데운 채로, 회는 지하 어시장에서. 한 명이 장보고 나머지는 차에서 강아지와.',q:'강릉중앙시장',p:['오징어순대·고로케 추천이 많아요','주변 거리가 예뻐요'],c:['저녁엔 일찍 닫는 가게가 많아요']}
+ ]},
+ d3:{eb:'3일차 · 10월 27일 화요일',title:'순두부 아침, 영진에서 마무리',dn:'점심 후 13:30 수지로 출발',icon:'meal',stops:[
+  {t:'08:00',k:'아침 포장',i:'bag',n:'뉴솔향순두부',d:'초당순두부길 67, 호텔에서 차로 5분. 이른 아침부터 문을 열어 포장해 와서 객실에서 먹기 좋아요. 흑임자 순두부와 두부구이도 추천. 건물 뒤 주차장. 뚜껑 단단히.',tags:[['info','이른 아침 영업']],q:'뉴솔향순두부',tel:'033-652-5575',p:['아침 일찍부터 손님이 많은 집','흑임자 순두부와 두부구이가 좋다는 평','반찬이 넉넉하고 맛있다는 후기'],c:['감자전은 덜 바삭했다는 후기','연휴엔 대기가 길어요']},
+  {t:'11:00',k:'체크아웃 · 커피',i:'cup',n:'엔드투앤드',d:'호텔 옆. 건물 앞쪽이 반려견 구역.',tags:[['ok','반려견 구역']],q:'엔드투앤드강릉',p:['반려견 구역이 따로 있어 편해요','5층 전망, 옥수수라떼·소금빵'],c:['디저트 평은 엇갈려요']},
+  {t:'12:30',k:'점심',i:'meal',n:'영진횟집',d:'1975년 노포. 회덮밥·물회, 3층 바다 전망. 일요일 휴무.',tags:[['ok','반려견 동반 표시'],['warn','전화 확인']],q:'영진횟집',tel:'033-662-7979',p:['반찬 미역국이 특히 맛있어요','수제 고추장 회덮밥이 대표'],c:['관광지 가격대라는 후기']},
+  {t:'13:30',k:'귀가',i:'car',n:'수지로 출발',d:'주문진IC → 강릉JC → 영동고속도로. 16:30~17:00 도착 예상.'}
+ ]}
+};
+var PREP=[
+ {h:'꼭 확인',rows:[['check','객실이 펫룸인지','7kg 이하, 최대 2마리'],['meal','식당 실내 반려견 동반 여부','케이지·유모차 필요한지도'],['moon','일·월·화 휴무 여부','앱 정보는 바뀔 수 있어요'],['bed','강아지 객실에 혼자 두기','체크인 때 문의']]},
+ {h:'챙길 것',rows:[['bag','부모님 목도리·장갑, 강아지 옷','해 지면 바닷바람이 차요'],['paw','배변봉투, 리드줄, 이동가방',''],['meal','젓가락·앞접시·물티슈','객실 저녁용']]},
+ {h:'강아지 없이 갈 수 있을 때',rows:[['meal','벌집 장칼국수','화요일 휴무 · 브레이크 14:40~17:00'],['meal','동화가든 짬뽕순두부','원격 줄서기 가능'],['meal','9남매두부집 순두부전골','목요일 휴무 · 08:00 오픈']]},
+ {h:'더 넣을 만한 곳',rows:[['walk','경포 가시연습지','평평한 데크길'],['walk','남항진 해변','솔바람다리 건너 한적한 모래사장'],['walk','주문진 소돌 아들바위','귀갓길 바닷가 산책로']]}
+];
+
+var TILE={car:'#007AFF',cup:'#A2845E',meal:'#FF9500',walk:'#30B0C7',bed:'#5856D6',bag:'#FF2D55',moon:'#AF52DE',paw:'#34C759',check:'#8E8E93',sun:'#FF9500'};
+function esc(s){return String(s).replace(/[&<>"]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})}
+function ic(n,s){return '<svg width="'+(s||18)+'" height="'+(s||18)+'"><use href="#i-'+n+'"/></svg>'}
+function tile(n){return '<span class="tile" style="background:'+(TILE[n]||'#8E8E93')+'">'+ic(n)+'</span>'}
+function sub(x){var s=esc(x.k);if(x.tags&&x.tags.some(function(t){return t[0]==='ok'}))s+=' · <span class="g">반려견 OK</span>';return s}
+function mk(k){return 'gn-memo-'+k}
+var MEMO={},DB=null,shared=false;
+function localMemo(k){try{return localStorage.getItem(mk(k))||''}catch(e){return ''}}
+function getMemo(k){return shared?(MEMO[k]||''):(MEMO[k]!=null?MEMO[k]:localMemo(k))}
+var writing={},pending={};
+function dbWrite(k){if(writing[k])return;var v=pending[k];delete pending[k];writing[k]=true;var ref=DB.collection('memos').doc(k);
+  (v?ref.set({text:v,at:new Date().toISOString()}):ref.delete()).then(function(){setStatus(SHARED_MSG)}).catch(function(e){try{if(v)localStorage.setItem(mk(k),v)}catch(_){}
+    var c=e&&e.code;if(c==='invalid_argument'){shared=false;setStatus('이 링크로는 메모를 볼 수만 있어요. 쓴 메모는 이 기기에만 저장됐어요.')}else if(c==='quota_exceeded'){setStatus('메모 저장 공간이 가득 찼어요. 안 쓰는 메모를 지워주세요.')}else{setStatus('메모를 공유하지 못했어요. 이 기기에는 저장됐어요.')}})
+  .then(function(){writing[k]=false;if(k in pending)dbWrite(k)})}
+function setMemo(k,v){MEMO[k]=v;if(shared&&DB){pending[k]=v;dbWrite(k)}else{try{if(v)localStorage.setItem(mk(k),v);else localStorage.removeItem(mk(k))}catch(e){}}}
+var SHARED_MSG='가족과 함께 보는 메모예요. 쓰면 바로 모두에게 보여요.',LOCAL_MSG='메모는 이 기기에만 저장돼요.',STATUS='메모 연결 중…';
+function setStatus(t){STATUS=t;document.querySelectorAll('.memoStatus').forEach(function(el){el.textContent=t});var pill=document.getElementById('sync');if(pill){pill.textContent=t===SHARED_MSG?'메모 공유 중':(t==='메모 연결 중…'?'연결 중':'이 기기에만 저장');pill.dataset.on=t===SHARED_MSG?'1':'0'}}
+function badge(k){document.querySelectorAll('textarea[data-memo="'+k+'"]').forEach(function(t){var c=t.closest('.cell');if(!c)return;var sb=c.querySelector('.sub'),m=sb&&sb.querySelector('.mm'),has=!!getMemo(k);
+  if(has&&!m)sb.insertAdjacentHTML('beforeend','<span class="mm-w"> · <span class="mm">메모</span></span>');else if(!has&&m)m.parentNode.remove()})}
+function applyRemote(k,v){if((MEMO[k]||'')===v)return;MEMO[k]=v;document.querySelectorAll('textarea[data-memo="'+k+'"]').forEach(function(t){if(document.activeElement!==t)t.value=v});
+  if(!document.querySelector('textarea[data-memo="'+k+'"]')){var cells=document.querySelectorAll('#list > .cell');cells.forEach(function(c){if(cur+'-'+c.dataset.id===k){var sb=c.querySelector('.sub'),m=sb.querySelector('.mm');if(v&&!m)sb.insertAdjacentHTML('beforeend','<span class="mm-w"> · <span class="mm">메모</span></span>');else if(!v&&m)m.parentNode.remove()}})}else badge(k)}
+function memoHTML(k,ph,rows){var v=getMemo(k);return '<label class="memo" for="m-'+k+'"><span class="memo-l">메모 · <span class="memoStatus">'+esc(STATUS)+'</span></span><textarea id="m-'+k+'" data-memo="'+k+'" rows="'+(rows||2)+'" placeholder="'+ph+'">'+esc(v)+'</textarea></label>'}
+var LL={'덕평자연휴게소':null,'고씨네 동해막국수':[37.7962504,128.9172674],'에브리모먼트 커피':[37.7922077,128.9136977],'경포호':[37.7966983,128.9020548],'경포해변':null,'체크인 · 노을 산책':[37.7859781,128.9271046],'솔향대게':[37.790793,128.9204173],'보사노바 강릉점':[37.7720398,128.9478401],'솔바람다리':[37.7682155,128.9513364],'강릉불고기 본점':[37.7489786,128.9595458],'헌화로 해안도로':[37.6590507,129.0565132],'강릉중앙시장':[37.7539884,128.8986105],'뉴솔향순두부':[37.789271,128.91517],'엔드투앤드':[37.7874584,128.9260619],'영진횟집':[37.8679709,128.8473719]};
+var NAVN={'체크인 · 노을 산책':'신라모노그램 강릉 레지던스','뉴솔향순두부':'솔향초당순두부'};
+function navURL(x){var nm=NAVN[x.n]||x.n,ll=LL[x.n];return ll?'https://map.kakao.com/link/to/'+encodeURIComponent(nm)+','+ll[0]+','+ll[1]:'https://map.kakao.com/link/search/'+encodeURIComponent(x.q||nm)}
+function cellHTML(x,idx){
+  var det='';
+  if(x.d)det+='<p>'+esc(x.d)+'</p>';
+  if(x.tags)det+='<div class="tags">'+x.tags.map(function(t){return '<span class="tag '+t[0]+'">'+esc(t[1])+'</span>'}).join('')+'</div>';
+  if(x.p)det+='<details class="rv"><summary>후기 미리보기</summary><ul>'+x.p.map(function(a){return '<li class="p">'+esc(a)+'</li>'}).join('')+(x.c||[]).map(function(a){return '<li class="c">'+esc(a)+'</li>'}).join('')+'</ul></details>';
+  if(x.q){var q=encodeURIComponent(x.q),qb=encodeURIComponent(x.q+' 후기');det+='<div class="links"><a class="go" href="'+navURL(x)+'" target="_blank" rel="noopener">길찾기</a><a href="https://map.naver.com/p/search/'+q+'" target="_blank" rel="noopener">지도</a><a href="https://search.naver.com/search.naver?ssc=tab.blog.all&amp;query='+qb+'" target="_blank" rel="noopener">블로그 후기</a>'+(x.tel?'<span class="tel">'+esc(x.tel)+'</span>':'')+'</div>'}
+  var mkey=cur+'-'+idx;det+=memoHTML(mkey,'예: 주차는 뒤편, 부모님은 짜장');
+  return '<li class="cell" data-id="'+idx+'"><div class="rowh" role="button" tabindex="0" aria-expanded="false">'+tile(x.i)+'<span class="mid"><span class="nm">'+esc(x.n)+'</span><span class="sub">'+sub(x)+(getMemo(mkey)?'<span class="mm-w"> · <span class="mm">메모</span></span>':'')+'</span></span><span class="val">'+esc(x.t)+'</span><span class="chev">'+(det?ic('chev',14):'')+'</span><button class="grip" type="button" aria-label="순서 이동, 위아래 화살표 키">'+ic('grip',20)+'</button></div>'+(det?'<div class="det" hidden>'+det+'</div>':'')+'</li>';
+}
+var panel=document.getElementById('panel'),editBtn=document.getElementById('editBtn'),cur='d1',editing=false,K='gn-order3-';
+function load(id){try{return JSON.parse(localStorage.getItem(K+id)||'null')}catch(e){return null}}
+function save(id,o){try{localStorage.setItem(K+id,JSON.stringify(o))}catch(e){}}
+var WX=null,WXDATE={d1:'2026-10-25',d2:'2026-10-26',d3:'2026-10-27'};
+function wxHTML(){var dt=WXDATE[cur];if(!WX||!WX.days||!dt)return '<span class="wx-none">날씨 예보 불러오는 중…</span>';
+  var d=WX.days.filter(function(x){return x.date===dt})[0];if(!d)return '<span class="wx-none">아직 이 날짜 예보가 없어요.</span>';
+  var up=WX.updated?new Date(WX.updated):null,ut=up&&!isNaN(up)?(up.getMonth()+1)+'/'+up.getDate()+' '+String(up.getHours()).padStart(2,'0')+':'+String(up.getMinutes()).padStart(2,'0'):'';
+  var rain=+d.pop||0;
+  return '<div class="wx-main"><span class="wx-t">'+esc(d.hi)+'°<span class="wx-lo"> / '+esc(d.lo)+'°</span></span><span class="wx-c">'+esc(d.cond)+'</span></div>'+
+    '<div class="wx-meta"><span class="'+(rain>=50?'wx-rain':'')+'">강수확률 '+rain+'%</span>'+(d.note?'<span>'+esc(d.note)+'</span>':'')+'</div>'+
+    '<div class="wx-src">'+esc(WX.source||'')+(ut?' · '+ut+' 기준':'')+(WX.caveat?' · '+esc(WX.caveat):'')+'</div>'}
+function paintWx(){var el=document.getElementById('wx');if(el)el.innerHTML=wxHTML()}
+var EMERG=[
+ {h:'동물병원',rows:[
+  {n:'베스트동물병원',sub:'옥천동 · 24시간, 매일',tel:'033-922-7582',ll:[37.7569422,128.8991552],note:'밤·일요일 응급용. 진료비가 비쌌다는 후기도 있어요.'},
+  {n:'주주동물병원',sub:'입암동 · 평일 9–19시, 토 9–17시, 일 9–14시',tel:'033-652-0075',ll:[37.7630225,128.9147512],note:'호텔에서 가장 가까운 편. 친절하고 과잉진료가 없다는 평.'},
+  {n:'바른동물병원',sub:'포남동 · 월–토 9–18:30(목 오전만), 일 휴무',tel:'033-643-0750',ll:[37.7629864,128.9065407],note:'여행 중 장염 온 강아지를 하루 만에 회복시켰다는 후기.'}
+ ]},
+ {h:'사람 병원·약국',rows:[
+  {n:'강릉아산병원 응급실',sub:'사천면 방동길 · 응급실 24시간',tel:'033-610-3114',ll:[37.8183893,128.8579281],note:'강릉의 큰 대학병원. 호텔에서 차로 약 20분.'},
+  {n:'강릉고려병원 응급실',sub:'옥천동 · 응급실',tel:'033-647-7582',ll:[37.7590196,128.8999994],note:'시내 쪽, 중앙시장 근처.'},
+  {n:'초당솔향약국',sub:'초당동 · 평일 9–19시, 토 9–13시, 일 휴무',tel:'033-652-7272',ll:[37.7845736,128.9151874],note:'호텔에서 차로 5분.'},
+  {n:'일요일 문 연 약국 찾기',sub:'휴일지킴이약국',url:'https://www.pharm114.or.kr/',note:'25일(일)에는 근처 약국이 대부분 쉬어요.'}
+ ]}
+];
+var TODOS=null;
+var WX_FB={"updated": "2026-10-16T15:35:00+09:00", "source": "AccuWeather 강릉 10일 예보", "caveat": "저장된 예보라 최신이 아닐 수 있어요", "days": [{"date": "2026-10-25", "hi": 19, "lo": 12, "cond": "대체로 흐리고 오후에 약한 비", "pop": 55, "note": "우산 챙기기 · 바닷바람 쌀쌀"}, {"date": "2026-10-26", "hi": 20, "lo": 13, "cond": "대체로 맑음", "pop": 0, "note": "해안 드라이브하기 좋은 날"}, {"date": "2026-10-27", "hi": 16, "lo": 7, "cond": "대체로 맑음", "pop": 10, "note": "아침 7도, 두꺼운 겉옷"}]},TODO_FB=[{"id": "t1", "order": 1, "title": "신라모노그램: 펫룸 확인 + 26일 조식 예약", "when": "10/18(일) 오전 10시", "tel": "033-820-0200", "notes": "예약 객실이 펫룸(레지던스 동)인지\n26일 조식 인원·시간 예약\n강아지 객실에 잠깐 혼자 둬도 되는지", "done": false}, {"id": "t2", "order": 2, "title": "영진횟집 예약: 27일(화) 12:30 점심", "when": "10/22(목) 오전 11시", "tel": "033-662-7979", "notes": "인원 + 3층 창가 자리\n강아지 동반 가능한지", "done": false}, {"id": "t3", "order": 3, "title": "솔향대게: 25일(일) 저녁 포장 미리 주문 또는 자리 예약", "when": "10/22(목) 오전 11시", "tel": "033-653-2202", "notes": "18:00 포장 미리 주문 가능한지\n대게 시세·크기\n강아지 동반 확인", "done": false}, {"id": "t4", "order": 4, "title": "반려견 동반 확인: 고씨네 · 강릉불고기", "when": "10/23(금) 오전 11시", "tel": "0507-1421-5458 / 033-646-6033", "notes": "고씨네 25일 12:45 점심, 강릉불고기 본점 26일 11:30 점심\n강아지 동반·예약 가능한지", "done": false}, {"id": "t5", "order": 5, "title": "솔향대게 포장 주문 전화", "when": "10/25(일) 오후 3시", "tel": "033-653-2202", "notes": "18:00 픽업으로 주문", "done": false}, {"id": "t6", "order": 6, "title": "내일 아침 솔향초당순두부 포장 시간 확인", "when": "10/26(월) 오후 6시", "tel": "033-652-5575", "notes": "27일 08:00 포장 가능한지, 몇 시 오픈인지", "done": false}];
+function useFallback(){if(DB)return;WX=WX_FB;try{fetch('weather.json',{cache:'no-store'}).then(function(r){return r.ok?r.json():null}).then(function(j){if(j&&j.days&&!DB){WX=j;paintWx()}}).catch(function(){})}catch(e){}var dn={};try{dn=JSON.parse(localStorage.getItem('gn-todo-done')||'{}')}catch(e){}
+  TODOS=TODO_FB.map(function(t){return Object.assign({},t,{done:!!dn[t.id]})});paintWx();paintTodos()}
+
+function todoHTML(){if(!TODOS)return '<p class="ftr">할 일 불러오는 중…</p>';if(!TODOS.length)return '<p class="ftr">할 일이 없어요.</p>';
+  var left=TODOS.filter(function(t){return !t.done}).length;
+  return '<p class="ftr" style="margin:0 0 4px">'+(left?'남은 할 일 '+left+'개 · 체크하면 가족 모두에게 보여요.':'모두 끝냈어요.')+'</p><ul class="group todos">'+TODOS.map(function(t){
+    return '<li class="cell static todo'+(t.done?' done':'')+'"><label class="rowh" style="grid-template-columns:28px 1fr;cursor:pointer;align-items:start"><input type="checkbox" class="tchk" data-id="'+esc(t.id)+'"'+(t.done?' checked':'')+'><span class="mid"><span class="nm nmw">'+esc(t.title)+'</span><span class="sub">'+esc(t.when||'')+(t.tel?' · <span class="tel" style="padding:0">'+esc(t.tel)+'</span>':'')+'</span>'+(t.notes&&!t.done?'<span class="sub tnote">'+esc(t.notes)+'</span>':'')+'</span></label></li>'}).join('')+'</ul>'}
+function paintTodos(){var el=document.getElementById('todos');if(el)el.innerHTML=todoHTML()}
+document.addEventListener('change',function(e){var c=e.target;if(!c.classList||!c.classList.contains('tchk'))return;
+  if(!DB){var dn={};try{dn=JSON.parse(localStorage.getItem('gn-todo-done')||'{}')}catch(_){}dn[c.dataset.id]=c.checked;try{localStorage.setItem('gn-todo-done',JSON.stringify(dn))}catch(_){}TODOS.forEach(function(t){if(t.id===c.dataset.id)t.done=c.checked});paintTodos();return}var id=c.dataset.id,v=c.checked;
+  TODOS.forEach(function(t){if(t.id===id)t.done=v});paintTodos();
+  DB.collection('todos').doc(id).update({done:v}).catch(function(){TODOS.forEach(function(t){if(t.id===id)t.done=!v});paintTodos();setStatus('이 링크로는 체크할 수 없어요. 편집자로 초대받아야 해요.')})});
+function emergHTML(){return '<p class="hdr">응급 연락처</p><p class="ftr" style="margin:0 0 4px">급할 땐 119, 반려동물은 아래 병원에 먼저 전화해 진료 가능한지 확인하세요.</p>'+EMERG.map(function(g){return '<p class="hdr">'+esc(g.h)+'</p><ul class="group">'+g.rows.map(function(r){
+  var go=r.url?'<a class="go" href="'+r.url+'" target="_blank" rel="noopener">찾아보기</a>':'<a class="go" href="https://map.kakao.com/link/to/'+encodeURIComponent(r.n)+','+r.ll[0]+','+r.ll[1]+'" target="_blank" rel="noopener">길찾기</a>';
+  return '<li class="cell static"><div class="rowh" style="grid-template-columns:1fr"><span class="mid"><span class="nm nmw">'+esc(r.n)+'</span><span class="sub">'+esc(r.sub)+'</span>'+(r.note?'<span class="sub">'+esc(r.note)+'</span>':'')+'<span class="links">'+go+(r.tel?'<span class="tel">'+esc(r.tel)+'</span>':'')+'</span></span></div></li>'}).join('')+'</ul>'}).join('')}
+var FOOD=[{"n": "오징어", "tag": "가을 제철", "why": "6~11월이 제철이고 9~10월에 살이 가장 통통하고 달아요. 강릉에선 오징어순대, 오징어회, 물회로 많이 먹어요.", "at": [{"n": "강릉중앙시장", "area": "성남동", "note": "오징어순대 포장. 26일(월) 저녁 장보기 일정에 있어요.", "ll": [37.7539884, 128.8986105], "plan": true}, {"n": "도마횟집", "area": "주문진", "note": "22년 된 노포. 물회와 그날 잡은 오징어회. 27일 영진횟집 대신 가도 좋아요.", "tel": "033-662-8999", "ll": [37.8930216, 128.8289247]}]}, {"n": "홍게·대게", "tag": "동해 대표", "why": "동해에서 잡히는 붉은대게(홍게)와 대게. 살이 달고 게딱지밥이 별미예요.", "at": [{"n": "솔향대게", "area": "송정", "note": "25일(일) 저녁 일정. 반려견 동반 후기 많음.", "tel": "033-653-2202", "ll": [37.790793, 128.9204173], "plan": true}, {"n": "찐수산대게횟집", "area": "주문진 방파제", "note": "홍게·회 포장 전문, 네이버 예약하면 빨리 받아요. 월요일 휴무.", "tel": "010-3917-5152", "ll": [37.894519, 128.8339238]}]}, {"n": "섭국", "tag": "강릉 향토", "why": "자연산 홍합(섭)에 고추장·부추를 넣고 끓인 얼큰한 국. 해장으로도 좋아 어른들이 좋아해요.", "at": [{"n": "완선섭국", "area": "포남동", "note": "섭을 통째로 넉넉히 넣어줘요. 1인 1만 원대, 매일 10~21시.", "tel": "033-645-2446", "ll": [37.766598, 128.9063795]}, {"n": "섭과물망치", "area": "교동", "note": "주차장이 편해요. 성게비빔밥도 인기. 매일 9~22시.", "tel": "033-655-5259", "ll": [37.7570332, 128.8971465]}]}, {"n": "감자옹심이", "tag": "강원 향토", "why": "감자를 갈아 빚은 쫄깃한 새알을 사골·멸치 국물에 끓인 강원도 음식. 부드러워 부모님께 좋아요.", "at": [{"n": "포남사골옹심이", "area": "포남동", "note": "손으로 간 감자로 빚는 현지인 집. 수요일 휴무, 15시대 브레이크.", "tel": "033-647-2638", "ll": [37.7649895, 128.9073716]}, {"n": "감자적1번지", "area": "성덕동", "note": "안목·솔바람다리에서 가까워 26일(월) 점심 대안으로 좋아요. 수요일 휴무.", "tel": "0507-1330-3760", "ll": [37.7628539, 128.9392859]}]}, {"n": "초당순두부", "tag": "강릉 대표", "why": "바닷물로 굳힌 고소한 두부. 하얀 순두부백반이 원조, 짬뽕순두부는 요즘 인기.", "at": [{"n": "솔향초당순두부", "area": "초당", "note": "27일(화) 아침 포장 일정. 흑임자 순두부·두부구이 추천.", "tel": "033-652-5575", "ll": [37.789271, 128.91517], "plan": true}, {"n": "9남매두부집", "area": "초당", "note": "담백한 순두부전골과 반찬 9가지. 목요일 휴무.", "tel": "033-653-9909", "ll": [37.7868887, 128.9138501]}]}, {"n": "장치찜", "tag": "동해안 생선", "why": "동해에서 잡히는 장치(벌레문치)를 꾸덕하게 말려 감자와 매콤하게 조린 찜.", "at": [{"n": "콩새장치찜", "area": "옥천동", "note": "현지인 추천집. 사장님 혼자 운영해 조금 기다릴 수 있어요. 중앙시장 근처.", "tel": "033-651-4343", "ll": [37.7604826, 128.8996272]}]}, {"n": "해물뚝배기", "tag": "아침 추천", "why": "전복과 해물을 듬뿍 넣은 뚝배기. 아침 7시 반부터 열어 호텔 근처 아침 식사로 좋아요.", "at": [{"n": "팔도전복해물뚝배기", "area": "강문", "note": "전복미역국도 인기. 매일 07:30~20:30.", "tel": "033-653-8882", "ll": [37.7956257, 128.9163367]}]}];
+function foodHTML(){return '<p class="hdr">강릉 제철·향토 음식</p><p class="ftr" style="margin:0 0 8px">10월 말 강릉에서 맛보기 좋은 음식과 추천 식당이에요. 도루묵·양미리는 11~12월이 본철이라 이번엔 조금 일러요. 일정에 없는 식당은 반려견 동반을 확인하지 못했으니 포장을 추천해요.</p>'+FOOD.map(function(f){
+  return '<section class="food"><div class="food-h"><span class="food-n">'+esc(f.n)+'</span><span class="food-tag">'+esc(f.tag)+'</span></div><p class="food-why">'+esc(f.why)+'</p><ul class="group">'+f.at.map(function(r){
+    return '<li class="cell static"><div class="rowh" style="grid-template-columns:1fr"><span class="mid"><span class="nm nmw">'+esc(r.n)+(r.plan?'<span class="inplan">일정에 있음</span>':'')+'</span><span class="sub">'+esc(r.area)+' · '+esc(r.note)+'</span><span class="links"><a class="go" href="https://map.kakao.com/link/to/'+encodeURIComponent(r.n)+','+r.ll[0]+','+r.ll[1]+'" target="_blank" rel="noopener">길찾기</a><a href="https://search.naver.com/search.naver?ssc=tab.blog.all&amp;query='+encodeURIComponent('강릉 '+r.n+' 후기')+'" target="_blank" rel="noopener">블로그 후기</a>'+(r.tel?'<span class="tel">'+esc(r.tel)+'</span>':'')+'</span></span></div></li>'}).join('')+'</ul></section>'}).join('')}
+function render(){
+  document.querySelectorAll('.seg button').forEach(function(b){b.setAttribute('aria-selected',b.dataset.go===cur)});
+  if(cur==='d5'){editBtn.hidden=true;panel.innerHTML=foodHTML();return}
+  if(cur==='d4'){
+    editBtn.hidden=true;
+    panel.innerHTML='<p class="hdr">예약·확인 할 일</p><div id="todos">'+todoHTML()+'</div><p class="hdr">여행 메모</p><div class="group memo-box">'+memoHTML('trip','준비할 것, 예약번호, 부모님께 전할 말 등을 적어두세요',5)+'</div><p class="ftr memoStatus">'+esc(STATUS)+'</p>'+emergHTML()+PREP.map(function(g){return '<p class="hdr">'+esc(g.h)+'</p><ul class="group">'+g.rows.map(function(r){return '<li class="cell static"><div class="rowh">'+tile(r[0])+'<span class="mid"><span class="nm nmw">'+esc(r[1])+'</span>'+(r[2]?'<span class="sub">'+esc(r[2])+'</span>':'')+'</span><span></span><span></span></div></li>'}).join('')+'</ul>'}).join('');
+    return;
+  }
+  editBtn.hidden=false;
+  var D=DAYS[cur],n=D.stops.length,idxs=D.stops.map(function(_,i){return i}),order=load(cur);
+  if(order&&order.length===n&&order.slice().sort(function(a,b){return a-b}).join()===idxs.join())idxs=order;
+  panel.innerHTML='<div id="lw" class="'+(editing?'editing editing-on':'')+'"><p class="hdr">'+esc(D.eb.replace(/^\d일차 · /,''))+' · '+esc(D.title)+'</p><div id="todaybar" class="todaybar" hidden></div><div id="wx" class="wx">'+wxHTML()+'</div><ul class="group" id="list">'+idxs.map(function(i,pos){return cellHTML(Object.assign({},D.stops[i],{t:D.stops[pos].t}),i)}).join('')+'</ul><p class="ftr">'+esc(D.dn)+'</p><button type="button" class="resetbtn" id="reset">원래 순서로</button></div>';
+  wire();markNow();
+}
+function rows(){return [].slice.call(document.querySelectorAll('#list > .cell'))}
+function retime(){var D=DAYS[cur];rows().forEach(function(r,i){r.querySelector('.val').textContent=D.stops[i].t});save(cur,rows().map(function(r){return +r.dataset.id}))}
+function toggle(h){var c=h.parentNode,d=c.querySelector('.det');if(!d)return;var o=!c.classList.contains('open');c.classList.toggle('open',o);d.hidden=!o;h.setAttribute('aria-expanded',o)}
+function wire(){
+  var list=document.getElementById('list');
+  document.getElementById('reset').onclick=function(){try{localStorage.removeItem(K+cur)}catch(e){}render()};
+  list.addEventListener('click',function(e){if(editing||e.target.closest('.grip')||e.target.closest('.det'))return;var h=e.target.closest('.rowh');if(h)toggle(h)});
+  list.addEventListener('keydown',function(e){
+    var g=e.target.closest('.grip');
+    if(g){var row=g.closest('.cell');
+      if(e.key==='ArrowUp'&&row.previousElementSibling)list.insertBefore(row,row.previousElementSibling);
+      else if(e.key==='ArrowDown'&&row.nextElementSibling)list.insertBefore(row.nextElementSibling,row);else return;
+      e.preventDefault();retime();g.focus();return}
+    var h=e.target.closest('.rowh');if(h&&!editing&&(e.key==='Enter'||e.key===' ')){e.preventDefault();toggle(h)}
+  });
+  list.addEventListener('pointerdown',function(e){
+    var g=e.target.closest('.grip');if(!g)return;e.preventDefault();
+    var row=g.closest('.cell'),startY=e.clientY;row.classList.add('dragging');g.setPointerCapture(e.pointerId);
+    function move(ev){var y=ev.clientY;row.style.transform='translateY('+(y-startY)+'px)';
+      var sib=rows().filter(function(r){return r!==row}),before=null;
+      for(var i=0;i<sib.length;i++){var b=sib[i].getBoundingClientRect();if(y<b.top+b.height/2){before=sib[i];break}}
+      if(before!==row.nextElementSibling){var o=row.getBoundingClientRect().top;list.insertBefore(row,before);startY+=row.getBoundingClientRect().top-o;row.style.transform='translateY('+(y-startY)+'px)'}}
+    function up(){g.removeEventListener('pointermove',move);g.removeEventListener('pointerup',up);g.removeEventListener('pointercancel',up);row.style.transform='';row.classList.remove('dragging');retime()}
+    g.addEventListener('pointermove',move);g.addEventListener('pointerup',up);g.addEventListener('pointercancel',up);
+  });
+}
+document.addEventListener('input',function(e){var t=e.target;if(!t.matches||!t.matches('textarea[data-memo]'))return;clearTimeout(t._t);t._t=setTimeout(function(){var k=t.dataset.memo;setMemo(k,t.value.trim());badge(k)},600)});
+var SIM=null;
+function kstNow(){if(SIM)return new Date(SIM.getTime());var n=new Date();return new Date(n.getTime()+(n.getTimezoneOffset()+540)*60000)}
+function todayTab(){var k=kstNow(),d=k.getFullYear()+'-'+String(k.getMonth()+1).padStart(2,'0')+'-'+String(k.getDate()).padStart(2,'0');for(var t in WXDATE)if(WXDATE[t]===d)return t;return null}
+function markNow(){
+  document.querySelectorAll('#list .now-tag').forEach(function(e){e.remove()});document.querySelectorAll('#list .cell').forEach(function(c){c.classList.remove('is-now','is-next','is-past')});
+  var bar=document.getElementById('todaybar');if(bar)bar.hidden=true;
+  if(todayTab()!==cur||editing)return;
+  var k=kstNow(),m=k.getHours()*60+k.getMinutes(),rows=[].slice.call(document.querySelectorAll('#list > .cell')),D=DAYS[cur];
+  var mins=rows.map(function(_,i){var t=D.stops[i].t.split(':');return +t[0]*60+ +t[1]});
+  var cur_i=-1;mins.forEach(function(v,i){if(v<=m)cur_i=i});var nx=cur_i+1<rows.length?cur_i+1:-1;
+  rows.forEach(function(r,i){if(i<cur_i)r.classList.add('is-past')});
+  function tag(i,txt,cls){if(i<0)return;var r=rows[i];r.classList.add(cls);var nm=r.querySelector('.nm');nm.insertAdjacentHTML('afterbegin','<span class="now-tag">'+txt+'</span>')}
+  tag(cur_i,'지금','is-now');tag(nx,'다음','is-next');
+  if(bar){var r=nx>=0?rows[nx]:null;if(r){var left=mins[nx]-m,h=Math.floor(left/60),mm=left%60;bar.hidden=false;bar.innerHTML='<span class="tb-l">오늘 · 다음 일정</span><span class="tb-n">'+esc(r.querySelector('.nm').textContent.replace(/^다음/,''))+'</span><span class="tb-t">'+(h?h+'시간 ':'')+mm+'분 뒤 · '+D.stops[nx].t+'</span>'}
+    else{bar.hidden=false;bar.innerHTML='<span class="tb-l">오늘</span><span class="tb-n">오늘 일정을 모두 마쳤어요</span>'}}
+}
+setInterval(markNow,60000);
+var SIM_STEPS=[new Date(2026,9,25,14,10),new Date(2026,9,26,11,40),new Date(2026,9,27,8,5)],simI=0;
+function simLabel(){var d=SIM;return (d.getMonth()+1)+'/'+d.getDate()+' '+(d.getHours()<12?'오전 ':'오후 ')+((d.getHours()+11)%12+1)+':'+String(d.getMinutes()).padStart(2,'0')}
+function simBanner(){var b=document.getElementById('simbar');if(!b){b=document.createElement('div');b.id='simbar';b.className='simbar';document.querySelector('.segwrap').insertAdjacentElement('afterend',b)}
+  if(!SIM){b.hidden=true;return}b.hidden=false;b.innerHTML='<span>미리보기 · <b>'+simLabel()+'</b> 기준</span><button type="button" id="simNext">다른 시간</button><button type="button" id="simOff">끄기</button>';
+  document.getElementById('simNext').onclick=function(){simI=(simI+1)%SIM_STEPS.length;startSim()};document.getElementById('simOff').onclick=stopSim}
+function startSim(){SIM=SIM_STEPS[simI];document.getElementById('simBtn').setAttribute('aria-pressed','true');cur=todayTab();render();simBanner()}
+function stopSim(){SIM=null;document.getElementById('simBtn').setAttribute('aria-pressed','false');render();simBanner()}
+document.getElementById('simBtn').addEventListener('click',function(){SIM?stopSim():startSim()});
+function go(id){cur=id;try{localStorage.setItem('gn-tab',id)}catch(e){}render()}
+document.querySelectorAll('.seg button').forEach(function(b){b.addEventListener('click',function(){go(b.dataset.go)})});
+editBtn.addEventListener('click',function(){editing=!editing;editBtn.textContent=editing?'완료':'편집';editBtn.setAttribute('aria-pressed',editing);setTimeout(markNow,0);var lw=document.getElementById('lw');if(lw){lw.classList.toggle('editing',editing);lw.classList.toggle('editing-on',editing);if(editing)rows().forEach(function(r){r.classList.remove('open');var d=r.querySelector('.det');if(d)d.hidden=true})}});
+(function(){var now=new Date(),kst=new Date(now.getTime()+(now.getTimezoneOffset()+540)*60000),t=new Date(kst.getFullYear(),kst.getMonth(),kst.getDate()),diff=Math.round((new Date(2026,9,25)-t)/86400000),el=document.getElementById('dday');
+ el.textContent=diff>0?'D-'+diff:diff===0?'D-DAY':diff>=-2?(1-diff)+'일차':'다녀왔어요'})();
+(async function(){try{if(!/claude\.ai$|claudeusercontent|claude\.site/.test(location.hostname)&&location.protocol!=='file:'){/* standalone */}var w=0;var maxw=/github\.io$/.test(location.hostname)?0:100;while(!(window.claude&&window.claude.use)&&w<maxw){await new Promise(function(r){setTimeout(r,100)});w++}
+  if(!(window.claude&&window.claude.use)){setStatus(LOCAL_MSG);useFallback();return}
+  var db=await window.claude.use('db');if(!db){setStatus(LOCAL_MSG);useFallback();return}DB=db;var first=true;
+  db.collection('todos').orderBy('order').onSnapshot(function(sn){TODOS=sn.docs.map(function(d){var b=d.data()||{};return Object.assign({id:d.id},b)});paintTodos()},function(){});
+  db.doc('weather/forecast').onSnapshot(function(sn){if(sn.exists){WX=sn.data();paintWx()}else{WX={days:[]};paintWx()}},function(){});
+  db.collection('memos').onSnapshot(function(snap){var seen={};snap.docs.forEach(function(d){var b=d.data()||{};seen[d.id]=1;applyRemote(d.id,String(b.text||''))});
+    Object.keys(MEMO).forEach(function(k){if(!seen[k]&&shared&&!(k in pending)&&!writing[k])applyRemote(k,'')});
+    if(first){first=false;shared=true;
+      try{for(var i=localStorage.length-1;i>=0;i--){var lk=localStorage.key(i);if(lk&&lk.indexOf('gn-memo-')===0){var k=lk.slice(8),v=localStorage.getItem(lk);if(v&&!seen[k]){MEMO[k]=v;pending[k]=v;dbWrite(k)}localStorage.removeItem(lk)}}}catch(e){}
+      setStatus(SHARED_MSG);var ft=document.getElementById('foot');if(ft)ft.textContent=ft.textContent.replace('편집으로 바꾼 순서와 메모는 이 기기에만 저장돼요.','메모는 가족과 함께 보고, 편집으로 바꾼 순서는 이 기기에만 저장돼요.')}
+  },function(){shared=false;setStatus('지금은 메모를 공유할 수 없어요. 이 기기에만 저장돼요.')})}catch(e){setStatus(LOCAL_MSG);useFallback()}})();
+setTimeout(function(){if(!WX||!WX.days)WX=WX_FB,paintWx();if(!TODOS)useFallback()},8000);
+var start=(location.hash||'').slice(1);if(!/^d[1-5]$/.test(start)){try{start=localStorage.getItem('gn-tab')}catch(e){start=null}}
+var tt=todayTab();go(tt?tt:(start&&/^d[1-5]$/.test(start)?start:'d1'));
+})();
+</script>
+
+</body></html>
